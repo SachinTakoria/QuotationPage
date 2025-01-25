@@ -1,0 +1,84 @@
+.sidebar-summary {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 30%;
+  height: auto;
+}
+
+.sidebar-summary h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+  background-color: #007bff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.summary-item {
+  margin-bottom: 20px;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 5px 0;
+}
+
+.summary-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #333;
+}
+
+.tick-mark {
+  color: #28a745; /* Green color for tick */
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.summary-right {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 20px; /* Increased size */
+  font-weight: bold;
+  color: #000; /* Darker color for emphasis */
+}
+
+.summary-total strong {
+  font-size: 26px; /* Extra large font for Grand Total value */
+}
+.total{
+  color: #28a745;
+}
+
+.download-quotation {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.download-quotation:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

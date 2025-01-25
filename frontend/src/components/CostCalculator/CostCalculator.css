@@ -1,0 +1,411 @@
+/* General Page Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    background-color: #e9e9e9;
+    padding: 5px;
+  }
+  .left-div{
+    border: 1px solid #eee;
+    height: auto;
+    width: 70%;
+    box-shadow: 4px #fff;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  
+  /* Button Styles */
+  button {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #333;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+
+ 
+  .pages-container h3 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .pages-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    gap: 15px; /* Space between checkboxes and input field */
+  }
+  
+  .pages-container label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    padding: 5px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .pages-container label:hover {
+    background-color: #007bff; /* Highlight on hover */
+    color: white; /* White text on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .pages-container input[type="checkbox"] {
+    accent-color: #007bff; /* Blue checkbox */
+    cursor: pointer;
+  }
+  
+  .pages-container label input[type="checkbox"] {
+    margin-right: 8px; /* Space between checkbox and label text */
+  }
+  
+  /* Add New Page Section */
+  .add-new-page {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .add-new-page input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .add-new-page input:focus {
+    border-color: #007bff; /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 4px #007bff; /* Subtle glow effect */
+  }
+  
+  .add-new-page button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .add-new-page button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .special-requirements-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    gap: 15px; /* Space between items */
+    margin-bottom: 20px; /* Add space below the section */
+  }
+  
+  .special-requirements-container h3 {
+    width: 100%; /* Ensure the heading takes full width */
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .special-requirements-container label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    background: #f8f9fa;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .special-requirements-container label:hover {
+    background-color: #007bff; /* Highlight on hover */
+    color: white; /* White text on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .special-requirements-container input[type="checkbox"] {
+    accent-color: #007bff; /* Blue checkbox */
+    cursor: pointer;
+  }
+  
+  .special-requirements-container label input[type="checkbox"] {
+    margin-right: 8px; /* Space between checkbox and text */
+  }
+  
+
+
+  .most-special-requirements-container {
+    margin-bottom: 20px; /* Space below the section */
+  }
+  
+  .most-special-requirements-container h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .most-special-requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between items */
+  }
+  
+  .most-special-requirements-grid label {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .most-special-requirements-grid label:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .most-special-requirements-grid input[type="checkbox"] {
+    accent-color: #007bff; /* Blue checkbox */
+    cursor: pointer;
+    margin-right: 8px; /* Space between checkbox and label text */
+  }
+
+  
+
+  .technology-container {
+    margin-bottom: 20px; /* Space below the section */
+  }
+  
+  .technology-container h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .technology-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 15px; /* Space between items */
+  }
+  
+  .technology-grid label {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .technology-grid label:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .technology-grid input[type="checkbox"] {
+    accent-color: #007bff; /* Blue checkbox */
+    cursor: pointer;
+    margin-right: 8px; /* Space between checkbox and label text */
+  }
+
+
+
+  .additional-options {
+    margin-bottom: 20px;
+  }
+  
+  .additional-options h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .additional-options-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for responsiveness */
+    gap: 15px; /* Space between options */
+  }
+  
+  .additional-option {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between checkbox and text */
+    padding: 10px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .additional-option:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .additional-option input[type="checkbox"] {
+    accent-color: #007bff; /* Blue checkbox */
+    cursor: pointer;
+  }
+  
+  .additional-option.active {
+    background-color: lightblue; /* Active state background */
+    color: #000; /* Dark text for contrast */
+    border: 1px solid #007bff; /* Highlighted border for active state */
+  }
+  
+
+
+
+  .number-of-pages {
+    margin-bottom: 20px;
+  }
+  
+  .number-of-pages h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .pages-container {
+    display: flex;
+    flex-wrap: wrap; /* Enables responsive wrapping */
+    gap: 15px; /* Adds spacing between the options */
+  }
+  
+  .page-option {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between checkbox and text */
+    padding: 10px 15px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .page-option:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .page-option input[type="checkbox"] {
+    accent-color: #007bff; /* Blue checkbox */
+    cursor: pointer;
+  }
+  
+  .page-option.active {
+    background-color: lightblue; /* Active state background */
+    color: #000; /* Dark text for contrast */
+    border: 1px solid #007bff; /* Highlighted border for active state */
+  }
+  
+  @media (max-width: 768px) {
+    .pages-container {
+      flex-direction: column; /* Stack vertically on smaller screens */
+    }
+  }
+
+  
+
+  .website-type {
+    margin-bottom: 20px;
+  }
+  
+  .website-type h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .website-type-container {
+    display: flex;
+    flex-wrap: wrap; /* Enables responsive wrapping */
+    gap: 15px; /* Adds spacing between options */
+  }
+  
+  .website-type-button {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox and text */
+    padding: 10px 15px;
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .website-type-button:hover {
+    background-color: #007bff; /* Blue background on hover */
+    color: white; /* White text on hover */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+  }
+  
+  .website-type-button input[type="checkbox"] {
+    accent-color: #007bff; /* Blue checkbox */
+    cursor: pointer;
+  }
+  
+  .website-type-button.active {
+    background-color: lightblue; /* Active state background */
+    color: #000; /* Dark text for contrast */
+    border: 1px solid #007bff; /* Highlighted border for active state */
+  }
+  
+  @media (max-width: 768px) {
+    .website-type-container {
+      flex-direction: column; /* Stack vertically on smaller screens */
+    }
+  }
+  
