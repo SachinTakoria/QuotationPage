@@ -158,54 +158,67 @@ const CostCalculator = () => {
     if (type === "websiteType") {
       // Reset previous selection and set the new one
       if (selectedWebsiteType) {
-        setTotalCost(totalCost - selectedWebsiteType.cost);
+        setTotalCost((prevTotal) => prevTotal - selectedWebsiteType.cost);
       }
       setSelectedWebsiteType(item);
-      setTotalCost(totalCost + item.cost);
+      setTotalCost((prevTotal) => prevTotal + item.cost);
     } else if (type === "pages") {
       // Reset previous selection and set the new one
       if (selectedPageRange) {
-        setTotalCost(totalCost - selectedPageRange.cost);
+        setTotalCost((prevTotal) => prevTotal - selectedPageRange.cost);
       }
       setSelectedPageRange(item);
-      setTotalCost(totalCost + item.cost);
+      setTotalCost((prevTotal) => prevTotal + item.cost);
     } else if (type === "pageName") {
+      // Toggle page names
       const exists = selectedPages.includes(item);
       if (exists) {
-        setSelectedPages(selectedPages.filter((page) => page !== item));
+        setSelectedPages((prevPages) => prevPages.filter((page) => page !== item));
       } else {
-        setSelectedPages([...selectedPages, item]);
+        setSelectedPages((prevPages) => [...prevPages, item]);
       }
     } else if (type === "specialRequirement") {
+      // Toggle special requirements
       const exists = specialRequirements.find((req) => req.label === item.label);
       if (exists) {
-        setSpecialRequirements(specialRequirements.filter((req) => req.label !== item.label));
-        setTotalCost(totalCost - item.cost);
+        setSpecialRequirements((prevReqs) =>
+          prevReqs.filter((req) => req.label !== item.label)
+        );
+        setTotalCost((prevTotal) => prevTotal - item.cost);
       } else {
-        setSpecialRequirements([...specialRequirements, item]);
-        setTotalCost(totalCost + item.cost);
+        setSpecialRequirements((prevReqs) => [...prevReqs, item]);
+        setTotalCost((prevTotal) => prevTotal + item.cost);
       }
     } else if (type === "mostSpecialRequirement") {
+      // Toggle most special requirements
       const exists = mostSpecialRequirements.find((req) => req.label === item.label);
       if (exists) {
-        setMostSpecialRequirements(mostSpecialRequirements.filter((req) => req.label !== item.label));
-        setTotalCost(totalCost - item.cost);
+        setMostSpecialRequirements((prevReqs) =>
+          prevReqs.filter((req) => req.label !== item.label)
+        );
+        setTotalCost((prevTotal) => prevTotal - item.cost);
       } else {
-        setMostSpecialRequirements([...mostSpecialRequirements, item]);
-        setTotalCost(totalCost + item.cost);
+        setMostSpecialRequirements((prevReqs) => [...prevReqs, item]);
+        setTotalCost((prevTotal) => prevTotal + item.cost);
       }
     } else {
+      // Handle generic additional options
       const exists = selectedOptions.find((opt) => opt.label === item.label);
       if (exists) {
-        setSelectedOptions(selectedOptions.filter((opt) => opt.label !== item.label));
-        setTotalCost(totalCost - item.cost);
+        setSelectedOptions((prevOptions) =>
+          prevOptions.filter((opt) => opt.label !== item.label)
+        );
+        setTotalCost((prevTotal) => prevTotal - item.cost);
       } else {
-        setSelectedOptions([...selectedOptions, { ...item, type }]);
-        setTotalCost(totalCost + item.cost);
+        setSelectedOptions((prevOptions) => [
+          ...prevOptions,
+          { ...item, type },
+        ]);
+        setTotalCost((prevTotal) => prevTotal + item.cost);
       }
     }
-   
   };
+  
   
 
   const handleAddNewPage = () => {
